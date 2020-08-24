@@ -20,8 +20,5 @@
 	  <preference name="Fullscreen" value="true" />
 	  <preference name="android-maxSdkVersion" value="28"/>
   </platform>
-  <rim:permissions>
-    <rim:permit>read_geolocation</rim:permit>
-  </rim:permissions>
-
+  <plugin name="cordova-plugin-geolocation" spec="^4.0.1"/>
 </widget>
