@@ -20,5 +20,6 @@
 	  <preference name="Fullscreen" value="true" />
 	  <preference name="android-maxSdkVersion" value="28"/>
   </platform>
+  <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
 </widget>
