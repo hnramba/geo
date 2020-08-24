@@ -19,8 +19,9 @@
   <platform name="android">
 	  <preference name="Fullscreen" value="true" />
 	  <preference name="android-maxSdkVersion" value="28"/>
-	  <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
   </platform>
-  
+  <rim:permissions>
+    <rim:permit>read_geolocation</rim:permit>
+  </rim:permissions>
 
 </widget>
