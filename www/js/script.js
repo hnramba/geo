@@ -2,11 +2,8 @@ $(document).ready(function () {
   var latitude = 0;
   var longitude = 0;
   var map, map2, map3;
-  if (navigator.geolocation == undefined) {
-    alert("Geolocation not availalble");
-  } else {
-    navigator.geolocation.getCurrentPosition(userLocated, locationError);
-  }
+
+  navigator.geolocation.getCurrentPosition(userLocated, locationError);
 
   $(document).on("pagechange", function () {
     map.invalidateSize();
