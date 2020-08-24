@@ -18,6 +18,7 @@
   </author>
   <platform name="android">
 	  <preference name="Fullscreen" value="true" />
+	   <preference name="android-targetSdkVersion" value="16"/>
   </platform>
    <plugin name="cordova-plugin-geolocation" source="npm"/>
 </widget>
