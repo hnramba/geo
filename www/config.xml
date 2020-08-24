@@ -18,7 +18,7 @@
   </author>
   <platform name="android">
 	  <preference name="Fullscreen" value="true" />
-	   <preference name="android-targetSdkVersion" value="28"/>
+	   <preference name="android-minSdkVersion" value="26"/>
 	  <preference name="phonegap-version" value="cli-9.0.0" />
   </platform>
    <plugin name="cordova-plugin-geolocation" source="npm"/>
