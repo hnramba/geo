@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.phonegap.example"
+    id          = "com.phonegap.geo"
     versionCode = "10"
     version     = "1.0.0" >
 
@@ -17,16 +17,13 @@
       Rambarassah Hootesh
   </author>
   <platform name="android">
-	  <preference name="Fullscreen" value="true" />
-	   <preference name="android-minSdkVersion" value="26"/>
-	  <preference name="phonegap-version" value="cli-9.0.0" />
+   <preference name="Fullscreen" value="true" />
+   <preference name="android-maxSdkVersion" value="28"/>
+   <preference name="phonegap-version" value="cli-9.0.0" />
   </platform>
   <access origin="*" launch-external="yes" />
   <allow-intent  href="http://*/*"/>
   <allow-intent  href="https://*/*"/>
    <plugin name="cordova-plugin-geolocation" source="npm"/>
    <plugin name="cordova-plugin-whitelist" source="npm"/>
-
-	
-	
 </widget>
