@@ -24,32 +24,6 @@ $(document).ready(function () {
       .bindPopup("This is My Location")
       .openPopup();
     map.invalidateSize();
-
-    var searchControl = L.esri.Geocoding.geosearch().addTo(map);
-    searchControl.on("results", function (data) {
-      results.clearLayers();
-      for (var i = data.results.length - 1; i >= 0; i--) {
-        results.addLayer(L.marker(data.results[i].latlng));
-      }
-    });
-
-    var geocodeService = L.esri.Geocoding.geocodeService();
-
-    map.on("click", function (e) {
-      geocodeService
-        .reverse()
-        .latlng(e.latlng)
-        .run(function (error, result) {
-          if (error) {
-            return;
-          }
-
-          L.marker(result.latlng)
-            .addTo(map)
-            .bindPopup(result.address.Match_addr)
-            .openPopup();
-        });
-    });
   }
   function locationError(error) {
     alert("Error code: " + error.code);
@@ -74,6 +48,8 @@ function searchloc() {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map2);
 
+  var results = L.layerGroup().addTo(map2);
+
   var searchControl = L.esri.Geocoding.geosearch().addTo(map2);
   searchControl.on("results", function (data) {
     results.clearLayers();
@@ -86,8 +62,23 @@ function searchloc() {
     map2.invalidateSize();
   });
   var geocodeService = L.esri.Geocoding.geocodeService();
+}
+function discover() {
+  map3 = L.map("map3").setView([-20.244959, 57.561768], 10);
 
-  map2.on("click", function (e) {
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map3);
+
+  var results = L.layerGroup().addTo(map3);
+
+  $(document).on("pagechange", function () {
+    map3.invalidateSize();
+  });
+  var geocodeService = L.esri.Geocoding.geocodeService();
+
+  map3.on("click", function (e) {
     geocodeService
       .reverse()
       .latlng(e.latlng)
@@ -97,7 +88,7 @@ function searchloc() {
         }
 
         L.marker(result.latlng)
-          .addTo(map2)
+          .addTo(map3)
           .bindPopup(result.address.Match_addr)
           .openPopup();
       });

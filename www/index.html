@@ -15,7 +15,6 @@
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <script src="js/script.js"></script>
     <script src="cordova.js"></script>
-
 </head>
 
 <body>
@@ -27,7 +26,8 @@
             <a id="btnMyLoc" href="#mylocation" class="ui-btn ui-corner-all" data-icon="location">My Location</a>
             <a id="btnSearch" href="#search" onclick="searchloc()" class="ui-btn ui-corner-all"
                 data-icon="search">Search</a>
-            <a id="btnDisc" href="#discover" class="ui-btn ui-corner-all" data-icon="info">discover</a>
+            <a id="btnDisc" href="#discover" onclick="discover()" class="ui-btn ui-corner-all"
+                data-icon="info">discover</a>
         </div>
         <div data-role="footer">
             <h3>Hootesh Rambarassah</h3>
@@ -42,7 +42,7 @@
                     <li><a href="#homepage" data-icon="home">Home</a></li>
                     <li><a id="btnMyLoc" href="#mylocation" data-icon="location">My Location</a></li>
                     <li><a id="btnSearch" href="#search" onclick="searchloc()" data-icon="search">Search</a></li>
-                    <li><a id="btnDisc" href="#discover" data-icon="eye">discover</a></li>
+                    <li><a id="btnDisc" href="#discover" onclick="discover()" data-icon="eye">discover</a></li>
                 </ul>
             </div>
         </div>
@@ -56,6 +56,27 @@
         </div>
     </div>
 
+    <div data-role="page" id="discover" data-theme="a">
+        <div data-role="header">
+            <h1>Open Street Map</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#homepage" data-icon="home">Home</a></li>
+                    <li><a id="btnMyLoc" href="#mylocation" data-icon="location">My Location</a></li>
+                    <li><a id="btnSearch" href="#search" onclick="searchloc()" data-icon="search">Search</a></li>
+                    <li><a id="btnDisc" href="#discover" onclick="discover()" data-icon="eye">discover</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div id="map3" style="height:75vh"></div>
+        </div>
+
+        <div data-role="footer">
+            <h3>Hootesh Rambarassah</h3>
+        </div>
+    </div>
     <div data-role="page" id="search" data-theme="a">
         <div data-role="header">
             <h1>Open Street Map</h1>
