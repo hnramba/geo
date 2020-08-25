@@ -21,6 +21,7 @@
 	   <preference name="android-minSdkVersion" value="26"/>
 	  <preference name="phonegap-version" value="cli-9.0.0" />
   </platform>
+  <access origin="*" launch-external="yes" />
   <allow-intent  href="http://*/*"/>
   <allow-intent  href="https://*/*"/>
    <plugin name="cordova-plugin-geolocation" source="npm"/>
