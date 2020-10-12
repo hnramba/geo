@@ -7,7 +7,7 @@
 
 <!-- versionCode is optional and Android only -->
 
-  <name>Geolocation</name>
+  <name>GeoTest</name>
 
   <description>
 	implementation of hybrid app with map api
